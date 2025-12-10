@@ -2,14 +2,14 @@ import cv2
 import mediapipe as mp
 import pickle
 
-model = pickle.load(open("rps_model4.pkl", "rb"))
+model = pickle.load(open("rps_model6.pkl", "rb"))
 
 mp_hands = mp.solutions.hands
 mp_draw = mp.solutions.drawing_utils
 
 cap = cv2.VideoCapture(0)
 
-with mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.7) as hands:
+with mp_hands.Hands(max_num_hands=2, min_detection_confidence=0.7) as hands:
     while True:
         ret, frame = cap.read()
         frame = cv2.flip(frame, 1)
