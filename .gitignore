@@ -1,5 +1,22 @@
-venv/
+# Python
 __pycache__/
 *.pyc
-.env
-.DS_Store
+
+# Virtual env
+venv/
+env/
+
+# CSV datasets
+*.csv
+
+# Model files
+*.pkl
+*.pickle
+
+# Mediapipe data
+*.npy
+
+# IDE/Editor
+.vscode/
+.idea/
+
